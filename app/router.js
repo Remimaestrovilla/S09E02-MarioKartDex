@@ -14,7 +14,7 @@ const homeController = require('./controllers/homeController');
 
 // Je réalise une route test qui va afficher la page d'accueil de mon application en indiquant le tracé de la route et la propriété en question
 
-router.get('/', homeController.home);
+router.get('/', homeController.showAllCharacters);
 
 // Je dois exporter le module car il faut l'importer ailleurs, ici, en l'occurence, il partira dans le server !
 

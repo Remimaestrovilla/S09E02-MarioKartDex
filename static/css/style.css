@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(rgb(230, 222, 222), green, blue);
+    font-family: 'Asap', sans-serif;
+}
+
+.home_header {
+    background-image: url('https://www.ecranlarge.com/uploads/image/001/403/mario-kart-8-deluxe-photo-1403122.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25em;
+    height: 80em;
+    border-right: 4px solid black;
+    opacity: 0.8
+}
+
+.home_nav {
+    padding-top: 2em;
+}
+
+.home_ul {
+    font-size: 2.5em;
+    margin-left: 0.8em;
+}
+
+.home_ul_home,
+.home_ul_search,
+.home_ul_favorite {
+    margin-bottom: 0.5em;
+    border: 2px solid black;
+    width: 7.4em;
+    height: 2em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    border-radius: 0.4em;
+    background-color: lightgray;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.home_ul_home:hover, .home_ul_search:hover, .home_ul_favorite:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+
+}
+
+.home_main {
+    position: absolute;
+    top: 3em;
+    left: 28em;
+}
+
+.home_title {
+    color: black;
+    font-size: 3em;
+    text-align: left;
+}
+
+.home_character_identity {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.home_character_img {
+    width: 320px;
+    height: 240px;
+    border: 1px solid black;
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.home_character_name {
+    color: red;
+    position: absolute;
+    left: 10em;
+}

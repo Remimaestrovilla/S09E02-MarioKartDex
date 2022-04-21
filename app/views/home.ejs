@@ -1,0 +1,35 @@
+<!-- J'ai factorisé le header pour ne pas qu'il se repète trop de fois, on part chercher le morceau manquant pour compléter le html -->
+
+<!-- J'utilise la syntaxe EJS -->
+
+<%- include ('partials/header') %>
+
+<main class="home_main">
+
+    <!-- Je passe mon titre en EJS dans la mesure ou il sera modifié selon plusieurs critères -->
+
+    <h1 class="home_title"><%= title %></h1>
+
+    <!-- On va faire une belle boucle pour boucler sur tous les personnages -->
+
+    <!-- Pour chaque personnage de l'ensemble des personnages on va réaliser une belle carte en CSS avec l'image et le nom du personnage -->
+
+    <!-- Je réalise une div pour faire le flex entre toute les cartes -->
+
+    <% for (const character of characters) { %>
+
+    <div class="home_character_identity">
+
+        <img src="/visuals/<%= character.visual_name %>" class="home_character_img" />
+
+    </div>
+
+    <% } %>
+
+</main>
+
+<!-- J'ai factorisé le footer pour ne pas qu'il se répete trop de fois, je part le chercher pour compléter le html -->
+
+<!-- J'utilise la syntaxe EJS -->
+
+<%- include ('partials/footer') %>
