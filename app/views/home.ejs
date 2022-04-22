@@ -16,15 +16,17 @@
 
     <!-- Je réalise une div pour faire le flex entre toute les cartes -->
 
-    <% for (const character of characters) { %>
-
     <div class="home_character_identity">
+
+        <% for (const character of characters) { %>
 
         <img src="/visuals/<%= character.visual_name %>" class="home_character_img" />
 
-    </div>
+        <p class="home_character_name"><%= character.name %></p>
+        
+        <% } %>
 
-    <% } %>
+    </div>
 
 </main>
 
