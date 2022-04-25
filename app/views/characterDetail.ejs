@@ -1,0 +1,53 @@
+<!-- J'ai factorisé le header pour ne pas qu'il se repète trop de fois, on part chercher le morceau manquant pour compléter le html -->
+
+<!-- J'utilise la syntaxe EJS -->
+
+<%- include ('partials/header') %>
+
+<main class="home_main">
+
+    <!-- Je passe mon titre en EJS dans la mesure ou il sera modifié selon plusieurs critères -->
+
+    <h1 class="home_title">Voici les détails du personnage
+
+        <span class="home_title_bold"><%= characters.name %></span> :
+
+    </h1>
+
+    <img class="img_detail" src="/visuals/<%= characters.visual_name %>" />
+
+    <!-- Je réalise l'ensemble des détails concernant chaque personnage de la licence Mario Kart -->
+
+    <p class="name_detail"><%= characters.name %></p>
+
+    <!-- Je réalise un  aside qui va me permettre d'afficher toutes les caractéristiques du personnage en question -->
+
+    <aside class="aside_pannel">
+
+        <!-- Je réalise une liste pour aider au référencement et aussi parce que c'est plus joli -->
+
+        <ul class="aside_pannel_ul">
+
+            <li class="aside_pannel_li">Numéro du personnage : <span class="home_title_bold"><%= characters.id %></span> </li>
+
+            <li class="aside_pannel_li">Nom du personnage : <span class="home_title_bold"><%= characters.name %></span> </li>
+
+            <li class="aside_pannel_li">Type du personnage : <span class="home_title_bold"><%= characters.type %></span> </li>
+
+            <li class="aside_pannel_li">Première apparition du personnage : <span class="home_title_bold"><%= characters.first_apparition %></span> </li>
+
+            <li class="aside_pannel_li">Dernière apparition du personnage : <span class="home_title_bold"><%= characters.last_apparition %></span> </li>
+
+            <li class="aside_pannel_li">Nombre total d'appairiton du personnage : <span class="home_title_bold"><%= characters.total_of_apparition %></span> </li>
+
+        </ul>
+
+    </aside>
+
+</main>
+
+<!-- J'ai factorisé le footer pour ne pas qu'il se répete trop de fois, je part le chercher pour compléter le html -->
+
+<!-- J'utilise la syntaxe EJS -->
+
+<%- include ('partials/footer') %>

@@ -18,12 +18,28 @@
 
     <div class="home_character_identity">
 
+        <!-- Pour chaque carte de la licence ... -->
+
         <% for (const character of characters) { %>
 
-        <img src="/visuals/<%= character.visual_name %>" class="home_character_img" />
+        <!-- Je réalise un lien de redirection vers les détails de la carte -->
 
-        <p class="home_character_name"><%= character.name %></p>
+        <a href="/character/<%= character.id %>">
+
+            <!-- Je montre l'image -->
+
+            <img src="/visuals/<%= character.visual_name %>" class="home_character_img" />
+
+        </a>
         
+        <div>
+
+            <!-- Je montre le nom -->
+
+            <p class="home_character_name"><%= character.name %></p>
+
+        </div>
+
         <% } %>
 
     </div>

@@ -1,0 +1,159 @@
+<!-- Cette vue me sert à réaliser le formulaire de tri des personnages de la licence -->
+
+<%- include ('partials/header') %>
+
+<main class="home_main">
+
+    <h1 class="home_title">Chercher des personnages selon vos critères !</h1>
+
+    <!-- Je veux que mes utilisateurs choisissent par type de personnages -->
+
+    <h3>Par type</h3>
+
+    <form action="/search/type" method="get">
+
+        <select name="type" id="type">
+
+            <option value="Humain">Humain</option>
+
+            <option value="Princesse">Princesse</option>
+
+            <option value="Carapace">Carapace</option>
+
+            <option value="Dinosaure">Dinosaure</option>
+
+            <option value="Champignon">Champignon</option>
+
+            <option value="Singe">Singe</option>
+
+            <option value="Fantome">Fantome</option>
+
+            <option value="Special">Special</option>
+
+            <option value="Vol">Vol</option>
+
+            <option value="Explosif">Explosif</option>
+
+        </select>
+
+        <input type="submit" value="Chercher">
+
+    </form>
+
+    <!-- Je veux que mes utilisateurs chosissent selon le nombre total d'apparition du personnage -->
+
+    <h3>Par Nombre total d'apparition</h3>
+
+    <form action="/search/apparition" method="get">
+
+        <label for="apparition">Apparition</label>
+
+        <input type="number" name="apparition" id="apparition" min=0 max=14 value=0>
+
+        <input type="submit" value="Chercher">
+
+    </form>
+
+    <!-- Je veux que mes utilisateurs choisissent selon la premiere apparition du personnage -->
+
+    <h3>Par première apparition</h3>
+
+    <form action="/search/first_apparition" method="get">
+
+        <label for="apparition">First Apparition</label>
+
+        <select name="first_apparition" id="first_apparition">
+
+            <option value="Super Mario Kart">Super Mario Kart</option>
+
+            <option value="Mario Kart 64">Mario Kart 64</option>
+
+            <option value="Mario Kart Super Circuit">Mario Kart Super Circuit</option>
+
+            <option value="Mario Kart Double Dash">Mario Kart Double Dash</option>
+
+            <option value="Mario Kart DS">Mario Kart DS</option>
+
+            <option value="Mario Kart Wii">Mario Kart Wii</option>
+
+            <option value="Mario Kart 7">Mario Kart 7</option>
+
+            <option value="Mario Kart 8">Mario Kart 8</option>
+
+            <option value="Mario Kart 8 Deluxe">Mario Kart 8 Deluxe</option>
+
+            <option value="Mario Kart Tour">Mario Kart Tour</option>
+
+            <option value="Mario Kart Arcade GP">Mario Kart Arcade GP</option>
+
+            <option value="Mario Kart Arcade GP2">Mario Kart Arcade GP2</option>
+
+            <option value="Mario Kart Arcade GP DX">Mario Kart Arcade GP DX</option>
+
+            <option value="Mario Kart Arcade GP VR">Mario Kart Arcade GP VR</option>
+
+        </select>
+
+        <input type="submit" value="Chercher">
+
+    </form>
+
+    <!-- Je veux que mes utilisateurs choisissent selon la dernière apparition du personnage -->
+
+    <h3>Par dernière apparition</h3>
+
+    <form action="/search/last_apparition" method="get">
+
+        <label for="apparition">Last Apparition</label>
+
+        <select name="last_apparition" id="last_apparition">
+
+            <option value="Super Mario Kart">Super Mario Kart</option>
+
+            <option value="Mario Kart 64">Mario Kart 64</option>
+
+            <option value="Mario Kart Super Circuit">Mario Kart Super Circuit</option>
+
+            <option value="Mario Kart Double Dash">Mario Kart Double Dash</option>
+
+            <option value="Mario Kart DS">Mario Kart DS</option>
+
+            <option value="Mario Kart Wii">Mario Kart Wii</option>
+
+            <option value="Mario Kart 7">Mario Kart 7</option>
+
+            <option value="Mario Kart 8">Mario Kart 8</option>
+
+            <option value="Mario Kart 8 Deluxe">Mario Kart 8 Deluxe</option>
+
+            <option value="Mario Kart Tour">Mario Kart Tour</option>
+
+            <option value="Mario Kart Arcade GP">Mario Kart Arcade GP</option>
+
+            <option value="Mario Kart Arcade GP2">Mario Kart Arcade GP2</option>
+
+            <option value="Mario Kart Arcade GP DX">Mario Kart Arcade GP DX</option>
+
+            <option value="Mario Kart Arcade GP VR">Mario Kart Arcade GP VR</option>
+
+        </select>
+
+        <input type="submit" value="Chercher">
+
+    </form>
+
+    <!-- Je veux que mes utilisateurs choisissent par nom -->
+
+    <h3>Par nom</h3>
+
+    <form action="/search/name" method="get">
+
+        <input type="text" name="name" id="name">
+
+        <input type="submit" value="Chercher">
+
+    </form>
+
+</main>
+
+<%- include ('partials/footer') %>

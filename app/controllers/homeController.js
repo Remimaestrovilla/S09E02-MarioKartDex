@@ -39,8 +39,11 @@ const homeController = {
             // Je rend la vue qui aura toutes les données crées précédemment
 
             response.render('home', {
+
                 characters,
+
                 title
+
             })
 
         } catch (error) {
@@ -55,6 +58,46 @@ const homeController = {
 
         }
 
+    },
+
+    // Je termine la logique qui me servira à afficher les détails de chacune des cartes
+
+    showOneCharacter: async function (request, response) {
+
+        // J'indique à mon controller que je veux que mon ID soit sous la forme d'un nombre, j'utilise donc la propriété Number
+
+        const characterID = Number(request.params.id);
+
+        // Je réalise un try / catch qui me servira pour la gestion d'erreur
+
+        try {
+
+            // Je part chercher toute la logique dont j'ai besoin 
+
+            const characters = await datamapper.getOneCharacter(characterID);
+
+            // Je réalise une belle vue en lui rendant toutes les données dont j'ai besoin 
+
+            response.render('characterDetail', {
+
+                characters,
+
+            });
+
+            // Direction les routes pour tracé la route correspondante
+
+        } catch (error) {
+
+            // Je préviens mon terminal qu'il y a une érreur le cas échéant
+
+            console.error(error);
+
+            // J'indique à mon utilisateur l'erreur en question et j'indique le type d'erreur pour le référencement naturel 
+
+            response.status(500).render('La carte que vous cherchez est indisponible');
+
+        }
+        
     }
 
 };
