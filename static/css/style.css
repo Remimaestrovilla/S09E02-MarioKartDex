@@ -37,6 +37,7 @@ body {
     transition: background-color .2s ease, color .2s ease;
 }
 
+.home_ul_href:hover,
 .home_ul_home:hover,
 .home_ul_search:hover,
 .home_ul_favorite:hover {
@@ -54,7 +55,7 @@ body {
 .home_title {
     color: black;
     font-size: 3em;
-    text-align: center;
+    margin-left: 0.5em;
     margin-bottom: 2em;
 }
 
@@ -73,4 +74,59 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: lightgray;
+    position: relative;
+}
+
+.home_character_name {
+    position: absolute;
+    z-index: 2;
+    margin-left: -20.5em;
+    margin-top: 17em;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 18.3em;
+    height: 1.4em;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+.img_detail {
+    width: 700px;
+    height: 700px;
+    background-color: lightgray;
+    border: 2px solid black;
+    margin-left: 1.5em;
+    position: relative;
+    top: -3em;
+}
+
+.name_detail {
+    position: absolute;
+    top: 46em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 1.5em;
+    width: 42.5em;
+    height: 2.5em;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    font-weight: bold;
+}
+
+.home_title_bold {
+    font-weight: bold;
+}
+
+.aside_pannel {
+    position: absolute;
+    top: 6em;
+    left: 48em;
+    width: 38em;
+    height: 42em;
+}
+
+.aside_pannel_li {
+    font-size: 1.4em;
+    margin-bottom: 1.3em;
 }
